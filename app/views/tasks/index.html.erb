@@ -3,6 +3,7 @@
 <ul>
   <% @tasks.each do |task| %>
     <li><%= link_to task.title, "tasks/#{task.id}" %></li>
-
   <% end %>
 </ul>
+
+<%= link_to "create_task", tasks_new_path, class: "btn btn-blue", id: "test", data: { test: "test" } %>

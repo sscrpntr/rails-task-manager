@@ -1,0 +1,24 @@
+<h1>CREATE NEW TASK</h1>
+<%= form_with model: @task, url: tasks_create_path do |f| %>
+  <div>
+  <%= f.label "title"%>
+  <%= f.text_field :title %>
+  </div>
+  <div>
+  <%= f.label "details"%>
+  <%= f.text_field :details %>
+  </div>
+  <div>
+  <%= f.label "mark as done"%>
+  <%= f.check_box :completed %>
+  </div>
+  <div>
+  <%= f.submit%>
+  </div>
+<% end %>
+
+<%# <%= link_to(name = "it is going the name you want it to be displayed on the website",
+
+url = this can be checked on the terminal using rails routes -> then take the link that is displayed on the Prefix line we want and then type f.e. "new_task_path
+
+html_options = {} -> it will be substituted by html code (like css that will give style to the piece of code we want to display with style) %>

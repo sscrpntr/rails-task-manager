@@ -1,0 +1,18 @@
+<h1>EDIT NEW TASK</h1>
+<%= form_with model: @task, url: tasks_update_path(id: @task.id) do |f| %>
+  <div>
+    <%= f.label "title" %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label "details" %>
+    <%= f.text_field :details %>
+  </div>
+  <div>
+    <%= f.label "mark as done" %>
+    <%= f.check_box :completed %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
