@@ -3,4 +3,15 @@
 
 <%= link_to "Go back to Index", tasks_path %>
 <%= link_to "Edit task", tasks_edit_path(id: @task.id) %>
-<%= link_to "Destroy task", tasks_destroy_path(id: @task.id) %>
+<%= link_to "Delete", task_path(id: @task.id), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+
+
+
+<%# localhost:3000/tasks/4 %>
+
+<%# task_path(id: @task.id) -> localhost:3000/tasks/4 %>
+<%# somewhere in the browser it says that it's a GET verb, so it will get the task/:id with the GET verb %>
+
+<%# task_path(id: @task.id), data: { turbo_method: :delete, %>
+<%# inside the data, it's specifying that the verb to use is DELETE, because of
+  turbo_method: :delete, so it will use the route : delete "tasks/:id %>

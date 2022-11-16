@@ -4,10 +4,9 @@ Rails.application.routes.draw do
   get 'tasks/:id', to: 'tasks#show', as: :task
   get 'tasks-new', to: 'tasks#new'
   post 'tasks/create', to: 'tasks#create'
-  get 'tasks-edit', to: 'tasks#edit', as: :tasks_edit
+  get 'tasks/:id/edit', to: 'tasks#edit', as: :tasks_edit
   patch 'tasks-update', to: 'tasks#update', as: :tasks_update
-  delete 'tasks-delete', to: 'tasks#delete'
-  delete 'tasks/:id', to: 'tasks#destroy'
+  delete 'tasks/:id', to: 'tasks#delete', as: :tasks_delete
   # Defines the root path route ("/")
   # root "articles#index"
 end
